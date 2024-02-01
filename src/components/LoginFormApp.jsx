@@ -12,6 +12,7 @@ const LoginFormApp = () => {
     console.log(data);
     reset();
   };
+
   return (
     <>
       <form onSubmit={handleSubmit(onSubmit)}>
@@ -34,7 +35,7 @@ const LoginFormApp = () => {
           />
           {errors.correo && (
             <small role="alert" className="text-danger">
-              {errors.correo.message}
+              ❌{errors.correo.message}
             </small>
           )}
         </div>
@@ -58,7 +59,7 @@ const LoginFormApp = () => {
           />
 
           {errors.pass && (
-            <small className="text-danger">{errors.pass.message}</small>
+            <small className="text-danger">❌{errors.pass.message}</small>
           )}
         </div>
         <div className="d-flex flex-column mt-4">
