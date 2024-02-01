@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import ModalRegisterApp from "./ModalRegisterApp";
 
@@ -141,6 +142,11 @@ const RegisterFormApp = () => {
         </div>
       </form>
       {isRegister && <ModalRegisterApp isRegisterChange={isRegisterChange} />}
+      <div className="text-center mt-2">
+        <Link to="/">
+          <span>Iniciar sesión</span>
+        </Link>
+      </div>
     </div>
   );
 };
